@@ -142,41 +142,50 @@ check_box.addEventListener('change',function(){
 	}
 })
 
+function ValidPhone() {
+    var re = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
+    var myPhone = document.getElementById('phone').value;
+    var valid = re.test(myPhone);
+    if (!valid) alert("Номер телефона введен неправильно!");
+    return valid;
+}  
 
 form_message.addEventListener('submit',function(e){
 	e.preventDefault();
-	message = `<b>Заявка с сайта</b>\n`
+	message = `<b>Заявка с сайта</b>\n`;
 	message += `<b>Отправитель: </b> ${this.firstname.value} ${this.lastname.value}\n`;
-	message += `<b>Телефон: </b> ${this.phone.value}\n`
-	message += `<b>Дополнительно о заказе: </b>\n${this.order_details.value}`
+	message += `<b>Телефон: </b> ${this.phone.value}\n`;
+	message += `<b>Дополнительно о заказе: </b>\n${this.order_details.value}`;
 
-	axios.post(URL_API, {
-		chat_id: chat_id_two,
-		parse_mode: 'html',
-		text: message
-	})
-	
-	axios.post(URL_API, {
-		chat_id: chat_id_one,
-		parse_mode: 'html',
-		text: message
-	})
-	.then((res) => {
-		this.firstname.value = "";
-		this.lastname.value = "";
-		this.phone.value = "";
-		this.order_details.value = "";
+	if(this.firstname.value && this.lastname.value && this.phone.value && ValidPhone()){
+		axios.post(URL_API, {
+			chat_id: chat_id_two,
+			parse_mode: 'html',
+			text: message
+		})
+		axios.post(URL_API, {
+			chat_id: chat_id_one,
+			parse_mode: 'html',
+			text: message
+		})
+		.then((res) => {
+			this.firstname.value = "";
+			this.lastname.value = "";
+			this.phone.value = "";
+			this.order_details.value = "";
 
-	})
-	.catch((err) => {
-		console.warn(err);
-	})
-	.finally(() => {
-		console.log('Конкц');
-		alert("Информация по заказу отправленна. Возможно с вами созвонятся.");
-	})
+		})
+		.catch((err) => {
+			console.warn(err);
+		})
+		.finally(() => {
+			alert("Информация по заказу отправленна. Возможно с вами созвонятся.");
+		})
+
+	}
 
 })
+
 
 let popup = document.getElementById('mypopup'),
 	popupToggle = document.getElementById('privacy_policy'),
@@ -211,29 +220,3 @@ button__go_down.forEach(element => {
 let scrollHeight = Math.max(
 	document.body.scrollHeight, document.documentElement.scrollHeight,document.body.offsetHeight, document.documentElement.offsetHeight,document.body.clientHeight, document.documentElement.clientHeight
 );
-
-
-// const mix_button = document.getElementById('gost__mix__elem');
-// const body_mix = document.querySelector('.gost__item__two');
-// let mix_elem = document.querySelectorAll('.gost__item__elem');
-
-// mix_button.addEventListener('click',function(e){
-// 	let mix_get = mix_elem;
-// 	let mix_index = 1;
-	
-
-// 	mix_elem.forEach(element => {
-// 		if(0 < mix_index < mix_elem.length){
-// 			mix_get[mix_index].remove();
-// 			element = mix_get[mix_index];
-// 			body_mix.append(element);
-// 		}
-// 		else{
-// 			mix_get[0].remove();
-// 			element = mix_get[0];
-// 			body_mix.append(element);
-// 		}
-// 		mix_index++;
-
-// 	});
-// })
