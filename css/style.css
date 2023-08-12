@@ -1,0 +1,1518 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,
+blockquote,pre,abbr,address,cite,code,del,dfn,em,img,
+ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,
+ol,ul,li,fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,article,aside,canvas,
+details,figcaption,figure,footer,header,hgroup,menu,
+nav,section,summary,time,mark,audio,video
+{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent
+}
+body
+{
+    line-height:1
+}
+article,aside,details,figcaption,figure,footer,header,
+hgroup,menu,nav,section
+{
+    display:block
+}
+nav ul
+{
+    list-style:none
+}
+blockquote,q
+{
+    quotes:none
+}
+blockquote:before,blockquote:after,q:before,q:after
+{
+    content:none
+}
+a
+{
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent
+}
+ins
+{
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none
+}
+mark
+{
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold
+}
+del
+{
+    text-decoration:line-through
+}
+abbr[title],dfn[title]
+{
+    border-bottom:1px dotted;
+    cursor:help
+}
+table
+{
+    border-collapse:collapse;
+    border-spacing:0
+}
+hr
+{
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #ccc;
+    margin:1em 0;
+    padding:0
+}
+input,select
+{
+    vertical-align:middle
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../fonts/NeueMachina-Ultralight.eot');
+    src: local('Neue Machina Ultralight'), local('NeueMachina-Ultralight'),
+        url('../fonts/NeueMachina-Ultralight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeueMachina-Ultralight.woff2') format('woff2'),
+        url('../fonts/NeueMachina-Ultralight.woff') format('woff'),
+        url('../fonts/NeueMachina-Ultralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../fonts/NeueMachina-Light.eot');
+    src: local('Neue Machina Light'), local('NeueMachina-Light'),
+        url('../fonts/NeueMachina-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeueMachina-Light.woff2') format('woff2'),
+        url('../fonts/NeueMachina-Light.woff') format('woff'),
+        url('../fonts/NeueMachina-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../fonts/NeueMachina-Black.eot');
+    src: local('Neue Machina Black'), local('NeueMachina-Black'),
+        url('../fonts/NeueMachina-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeueMachina-Black.woff2') format('woff2'),
+        url('../fonts/NeueMachina-Black.woff') format('woff'),
+        url('../fonts/NeueMachina-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../fonts/NeueMachina-Regular.eot');
+    src: local('Neue Machina Regular'), local('NeueMachina-Regular'),
+        url('../fonts/NeueMachina-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeueMachina-Regular.woff2') format('woff2'),
+        url('../fonts/NeueMachina-Regular.woff') format('woff'),
+        url('../fonts/NeueMachina-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../fonts/NeueMachina-Bold.eot');
+    src: local('Neue Machina Bold'), local('NeueMachina-Bold'),
+        url('../fonts/NeueMachina-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeueMachina-Bold.woff2') format('woff2'),
+        url('../fonts/NeueMachina-Bold.woff') format('woff'),
+        url('../fonts/NeueMachina-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../fonts/NeueMachina-Medium.eot');
+    src: local('Neue Machina Medium'), local('NeueMachina-Medium'),
+        url('../fonts/NeueMachina-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeueMachina-Medium.woff2') format('woff2'),
+        url('../fonts/NeueMachina-Medium.woff') format('woff'),
+        url('../fonts/NeueMachina-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../fonts/NeueMachina-Ultrabold.eot');
+    src: local('Neue Machina Ultrabold'), local('NeueMachina-Ultrabold'),
+        url('../fonts/NeueMachina-Ultrabold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NeueMachina-Ultrabold.woff2') format('woff2'),
+        url('../fonts/NeueMachina-Ultrabold.woff') format('woff'),
+        url('../fonts/NeueMachina-Ultrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-Heavy.eot');
+    src: local('Futura PT Heavy'), local('FuturaPT-Heavy'),
+        url('../fonts/FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Heavy.woff') format('woff'),
+        url('../fonts/FuturaPT-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-Medium.eot');
+    src: local('Futura PT Medium'), local('FuturaPT-Medium'),
+        url('../fonts/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Medium.woff') format('woff'),
+        url('../fonts/FuturaPT-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-MediumObl.eot');
+    src: local('Futura PT Medium Oblique'), local('FuturaPT-MediumObl'),
+        url('../fonts/FuturaPT-MediumObl.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-MediumObl.woff') format('woff'),
+        url('../fonts/FuturaPT-MediumObl.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura PT Cond';
+    src: url('../fonts/FuturaPTCond-Medium.eot');
+    src: local('Futura PT Cond Medium'), local('FuturaPTCond-Medium'),
+        url('../fonts/FuturaPTCond-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPTCond-Medium.woff') format('woff'),
+        url('../fonts/FuturaPTCond-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-LightObl.eot');
+    src: local('Futura PT Light Oblique'), local('FuturaPT-LightObl'),
+        url('../fonts/FuturaPT-LightObl.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-LightObl.woff') format('woff'),
+        url('../fonts/FuturaPT-LightObl.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura PT Book';
+    src: url('../fonts/FuturaPT-Book.eot');
+    src: local('Futura PT Book'), local('FuturaPT-Book'),
+        url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Book.woff') format('woff'),
+        url('../fonts/FuturaPT-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT Cond';
+    src: url('../fonts/FuturaPTCond-Bold.eot');
+    src: local('Futura PT Cond Bold'), local('FuturaPTCond-Bold'),
+        url('../fonts/FuturaPTCond-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPTCond-Bold.woff') format('woff'),
+        url('../fonts/FuturaPTCond-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT Book';
+    src: url('../fonts/FuturaPT-BookObl.eot');
+    src: local('Futura PT Book Oblique'), local('FuturaPT-BookObl'),
+        url('../fonts/FuturaPT-BookObl.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-BookObl.woff') format('woff'),
+        url('../fonts/FuturaPT-BookObl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura PT Cond Extra';
+    src: url('../fonts/FuturaPTCond-ExtraBoldObl.eot');
+    src: local('Futura PT Cond Extra Bold Oblique'), local('FuturaPTCond-ExtraBoldObl'),
+        url('../fonts/FuturaPTCond-ExtraBoldObl.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPTCond-ExtraBoldObl.woff') format('woff'),
+        url('../fonts/FuturaPTCond-ExtraBoldObl.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-Light.eot');
+    src: local('Futura PT Light'), local('FuturaPT-Light'),
+        url('../fonts/FuturaPT-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Light.woff') format('woff'),
+        url('../fonts/FuturaPT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-BoldObl.eot');
+    src: local('Futura PT Bold Oblique'), local('FuturaPT-BoldObl'),
+        url('../fonts/FuturaPT-BoldObl.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-BoldObl.woff') format('woff'),
+        url('../fonts/FuturaPT-BoldObl.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura PT Demi';
+    src: url('../fonts/FuturaPT-DemiObl.eot');
+    src: local('Futura PT Demi Oblique'), local('FuturaPT-DemiObl'),
+        url('../fonts/FuturaPT-DemiObl.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-DemiObl.woff') format('woff'),
+        url('../fonts/FuturaPT-DemiObl.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura PT Cond Extra';
+    src: url('../fonts/FuturaPTCond-ExtraBold.eot');
+    src: local('Futura PT Cond Extra Bold'), local('FuturaPTCond-ExtraBold'),
+        url('../fonts/FuturaPTCond-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPTCond-ExtraBold.woff') format('woff'),
+        url('../fonts/FuturaPTCond-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT Demi';
+    src: url('../fonts/FuturaPT-Demi.eot');
+    src: local('Futura PT Demi'), local('FuturaPT-Demi'),
+        url('../fonts/FuturaPT-Demi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Demi.woff') format('woff'),
+        url('../fonts/FuturaPT-Demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-HeavyObl.eot');
+    src: local('Futura PT Heavy Oblique'), local('FuturaPT-HeavyObl'),
+        url('../fonts/FuturaPT-HeavyObl.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-HeavyObl.woff') format('woff'),
+        url('../fonts/FuturaPT-HeavyObl.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura PT Extra';
+    src: url('../fonts/FuturaPT-ExtraBoldObl.eot');
+    src: local('Futura PT Extra Bold Oblique'), local('FuturaPT-ExtraBoldObl'),
+        url('../fonts/FuturaPT-ExtraBoldObl.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-ExtraBoldObl.woff') format('woff'),
+        url('../fonts/FuturaPT-ExtraBoldObl.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura PT Cond Book';
+    src: url('../fonts/FuturaPTCond-Book.eot');
+    src: local('Futura PT Cond Book'), local('FuturaPTCond-Book'),
+        url('../fonts/FuturaPTCond-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPTCond-Book.woff') format('woff'),
+        url('../fonts/FuturaPTCond-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-Bold.eot');
+    src: local('Futura PT Bold'), local('FuturaPT-Bold'),
+        url('../fonts/FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Bold.woff') format('woff'),
+        url('../fonts/FuturaPT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT Extra';
+    src: url('../fonts/FuturaPT-ExtraBold.eot');
+    src: local('Futura PT Extra Bold'), local('FuturaPT-ExtraBold'),
+        url('../fonts/FuturaPT-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-ExtraBold.woff') format('woff'),
+        url('../fonts/FuturaPT-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT Cond';
+    src: url('../fonts/FuturaPTCond-BoldObl.eot');
+    src: local('Futura PT Cond Bold Oblique'), local('FuturaPTCond-BoldObl'),
+        url('../fonts/FuturaPTCond-BoldObl.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPTCond-BoldObl.woff') format('woff'),
+        url('../fonts/FuturaPTCond-BoldObl.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura PT Cond';
+    src: url('../fonts/FuturaPTCond-MediumObl.eot');
+    src: local('Futura PT Cond Medium Oblique'), local('FuturaPTCond-MediumObl'),
+        url('../fonts/FuturaPTCond-MediumObl.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPTCond-MediumObl.woff') format('woff'),
+        url('../fonts/FuturaPTCond-MediumObl.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Futura PT Cond Book';
+    src: url('../fonts/FuturaPTCond-BookObl.eot');
+    src: local('Futura PT Cond Book Oblique'), local('FuturaPTCond-BookObl'),
+        url('../fonts/FuturaPTCond-BookObl.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPTCond-BookObl.woff') format('woff'),
+        url('../fonts/FuturaPTCond-BookObl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: initial;
+}
+
+body{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: lighter;
+    color: #000;
+    overflow: auto;
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 67px;
+}
+
+/* Header style start */
+
+.order, .header, .motto__text{
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    width: 1160px;
+}
+
+.header__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 67px;
+    
+}
+
+.header__mail{
+    cursor: pointer;
+    border: 3px;
+    margin: 6px 0px 5px auto;
+}
+
+.header__mail-link span{
+    opacity: 0;
+    position: absolute;
+}
+
+/* Header style end */
+
+/* Order style start */
+
+.order__wrapper{
+    background-image: url("../img/background__order.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    margin: 20px auto;
+    line-height: normal;
+    padding-top: 40px;
+}
+
+.title{
+    color: #FFF;
+    font-size: 100px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title-tara{
+    color: #FFF;
+    font-size: 270px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 800;
+    line-height: 180px;
+    text-transform: uppercase;
+}
+
+.title__order-new{
+    margin-top: 52px;
+    margin-bottom: 47px;
+    color: #FFF;
+    font-size: 25px;
+    font-family: 'Futura PT';
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+
+.style__button__body{
+    cursor: pointer;
+    width: 370px;
+    height: 250px;
+    border-radius: 20px;
+    padding: 4px;
+    background-color: #00B4FF;
+    color: #FFF;
+    font-size: 25px;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 450;
+    line-height: 104.2%;
+    text-transform: uppercase;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+.style__button__body:hover{
+opacity: 0.8;
+}
+
+
+/* Order style end */
+
+.stylish__designer__picture{
+    margin-top: 110px;
+    height: 185px;
+    background-image: url(../img/technologies.png);
+}
+
+/* About Us style start */
+
+.about__us__wrapper{
+    margin: 110px auto 0px;
+}
+
+.goodly__wrapper{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.about__us__flex{
+    min-height: 900px;
+    display: flex;
+}
+
+.goodly{
+    flex: 1 0 25%;
+    max-width: 3000px;
+    height: 900px;
+    border-radius: 20px;
+    background: rgba(217, 217, 217, 0.2);
+    opacity: 0.800000011920929;
+    backdrop-filter: blur(25px);
+    background: transparent;
+    background: -moz-linear-gradient(top, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -webkit-linear-gradient(top, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -o-linear-gradient(top, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(to bottom, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.goodly__left{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-right: 5px;
+}
+
+.goodly__right{
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-left: 5px;
+}
+
+.AB__block__one{
+    height: 902px;
+    width: 579px;
+}
+
+.boss{
+    box-sizing: border-box;
+    height: 902px;
+    width: 579px;
+    border-radius: 20px;
+    border-top-right-radius: 69px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--unnamed, #1C6982);
+}
+
+.boss__img{
+    margin: 20px;
+    border-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.AB__block__two{
+    box-sizing: border-box;
+    height: 902px;
+    width: 579px;
+    border-radius: 20px;
+    border-top-left-radius: 69px;
+    border: 3px solid var(--unnamed, #1C6982);
+    color: #FFF;
+    font-size: 22px;
+    font-family: 'Futura PT';
+    font-style: normal;
+    line-height: 131%;
+    text-transform: uppercase;
+    padding: 70px 65px;
+    margin-left: 6px
+}
+
+.text__about__us{
+    font-size: 64px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 800;
+    margin-top: 17px;
+}
+
+.welcome{
+    margin-top: 107px;
+    margin-left: 7px;
+}
+
+.full_name{
+    margin-top: 33px;
+    margin-left: 7px;
+}
+
+.text_one{
+    margin-top: 34px;
+    margin-left: 7px;
+}
+
+.text_two{
+    margin-top: 35px;
+    margin-left: 7px;
+}
+
+/* About Us style end */
+
+
+/* Quality style start */
+.quality{
+    margin: 205px auto 200px;
+    width: 1400px;
+    min-height: 1430px;
+    border-radius: 100px;
+    background: #32343A;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+
+}
+
+.union{
+    background: url(../img/Union.png);
+    background-repeat: no-repeat;
+    background-position: 14% 354px;
+    
+}
+
+.list__of__quality{
+    height: 890px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+.quality_open{
+    height: 1800px;
+}
+
+.quality_wrapper{
+    z-index: 1;
+    text-align: center;
+    padding: 100px 100px 0px 100px;
+    margin: 0 auto;
+    left: 0; 
+    right: 0; 
+    margin: auto;
+}
+
+.title__quality__text{
+    margin-top: 50px;
+    color: var(--unnamed, #00B4FF);
+    font-size: 64px;
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 800;
+    line-height: 131%;
+    text-transform: uppercase;
+    word-wrap: break-word;
+
+}
+
+.title__quality__descrition{
+    margin-top: 15px;
+    color: #B7B7B7;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 131%;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+.ul__quality{
+    padding:5px;
+    margin-top: 100px;
+}
+
+.var__quality{
+    min-height: 150px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    color: #FFF;
+    font-size: 24px;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+    border-left: 25px solid rgba(253, 253, 253, 0);
+    border-right: 25px solid rgba(253, 253, 253, 0);
+}
+
+.var__quality:hover{
+    
+    background: rgba(217, 217, 217, 0.2);
+    fill: linear-gradient(136deg, rgba(255, 255, 255, 0.20) 0%, rgba(217, 217, 217, 0.00) 100%);
+    opacity: 0.800000011920929;
+    backdrop-filter: blur(25px);
+}
+
+.var__quality:last-child{
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    border-left: 25px solid rgba(253, 253, 253, 0);
+    border-right: 25px solid rgba(253, 253, 253, 0);
+}
+
+
+.quality__more_info{
+    height: 50px;
+    color: #FFF;
+    font-size: 24px;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.hide__line__quality{
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    border-left: 25px solid rgba(253, 253, 253, 0);
+    border-right: 25px solid rgba(253, 253, 253, 0);
+}
+
+.hide__quality .tracking__quality{
+    transform: translate(0, 3px) rotate(45deg);
+}
+
+.rotate__image__quality{
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+    transform: rotate(180deg);
+}
+
+.button__more__info__quality{
+    position: relative;
+    bottom: -80px;
+    left: 50%;
+    margin-left: -80px;
+    width: 160px;
+    height: 160px;
+    border-radius: 160px;
+    background: #32343A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img__more__info__quality{
+    cursor: pointer;
+    -webkit-transition: all 1s ease;;
+    -moz-transition: all 1s ease;;
+    -o-transition: all 1s ease;;
+    transition: all 1s ease;
+    opacity: 1;
+}
+.img__more__info__quality:hover{
+    opacity: 0.8;
+}
+
+/* Quality style end */
+
+/* GOST style start */
+.gots{
+    min-height: 1076px;
+    background-color: #FFF;
+    padding-top: 95px;
+}
+
+.gost__wrapper{
+    margin: 0 auto;
+    width: 1400px;
+    text-align: right;
+}
+
+.gost__title{
+    margin-right: 140px;
+    color: #000;
+    font-family: 'Neue Machina';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 131%;
+    text-transform: uppercase;
+}
+
+.gost__item__wrapper{
+    display: flex;
+    align-items:start;
+    margin-top: 30px;
+    margin-left: 130px;
+}
+
+.gost__item__one{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+.gost__item__img{
+    width: 400px;
+    height: 520px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-image: url(../img/Tara.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.gost__button__item{
+    margin-left: 18px;
+    margin-top: 62px;
+}
+
+.gost__item__two{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 69px;
+}
+
+.gost__item__elem{
+    box-sizing: border-box;
+    padding-left: 30px;
+    display: block;
+    width: 326px;
+    height: 282px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    text-align: left;
+    word-wrap: break-word;
+    margin-right: 8px;
+    margin-bottom: 9px;
+}
+
+.gost__item__next{
+    width: 326px;
+    height: 282px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gost__next__img{
+    cursor: pointer;
+    -webkit-transition: all 1s ease;;
+    -moz-transition: all 1s ease;;
+    -o-transition: all 1s ease;;
+    transition: all 1s ease;
+    opacity: 1;
+}
+
+.gost__next__img:hover{
+    opacity: 0.8;
+}
+
+.gost__elem__img{
+    margin-top: 28px;
+    
+}
+
+.gost__elem__title{
+    margin-top: 40px;
+    font-family: 'Futura PT';
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 104.2%;
+}
+
+.gots__elem__text{
+    margin-top: 37px;
+    font-family: 'Futura PT';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 104.2%;
+}
+/* GOST style end */
+
+/* Motto style start */
+.motto{
+    margin-top: 100px;
+    font-family: 'Neue Machina';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 131%;
+    text-transform: uppercase;
+}
+
+.spend{
+    display: flex;
+    text-align: right;
+    min-height: 90px;
+}
+
+.economize{
+    display: flex;
+    margin-top: 10px;
+    min-height: 90px;
+    text-align: left
+}
+
+.motto__text__spend{
+    box-sizing: border-box;
+    color: #000;
+    background-color: #FFF;
+    flex: 1 0 31%;
+    padding-right: 20px;
+}
+
+.motto__text__economize{
+    box-sizing: border-box;
+    color: #FFF;
+    background-color: #00B4FF;
+    flex: 1 0 39%;
+    padding-left: 20px;
+
+}
+.motto__block{
+    flex: 1 0 25%;
+}
+
+.motto__text{
+    margin-top: 75px;
+    max-width: 1160px;
+    text-align: left;
+    color: #FFF;
+    font-family: 'Futura PT';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 162%;
+    text-transform: uppercase;
+}
+
+.motto .motto__text p{
+    margin-top: 59px;
+}
+
+/* Motto-Advantage style start */
+
+.gray__border{
+    border-radius: 20px;
+    border: 3px solid #D9D9D9;
+    color: #ADADAD;
+}
+
+.bghover{
+    border-radius: 20px;
+    background: rgba(217, 217, 217, 0.2);
+    opacity: 0.800000011920929;
+    backdrop-filter: blur(25px);
+    background: transparent;
+    background: -moz-linear-gradient(top, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -webkit-linear-gradient(top, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -o-linear-gradient(top, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(to bottom, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.advantage{
+    margin-top: 68px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Futura PT';
+    font-style: normal;
+    text-transform: uppercase;
+    align-items: flex-end
+}
+
+.advantage .goodly{
+    height: 650px;
+    border-radius: 20px;
+    background: rgba(217, 217, 217, 0.2);
+    opacity: 0.800000011920929;
+    backdrop-filter: blur(25px);
+}
+
+
+.advantage__box{
+    box-sizing: border-box;
+    min-height: 653px;
+    max-width: 1175px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.advantage__box__left{
+    display: flex;
+    flex: 1 0 25%;
+    min-height: 653px;
+    max-width: 3000px;
+    align-items: flex-end;
+}
+
+.advantage__box__right{
+    display: flex;
+    flex: 1 0 25%;
+    min-height: 653px;
+    max-width: 3000px;
+    justify-content: flex-start;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+.advantage__line__square{
+    height: 266px;
+    flex: 1 0 100%;
+}
+
+.advantage__box__left .bghover{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.advantage__box__right .advantage__line__square{
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    backdrop-filter: blur(25px);
+}
+
+.advantage__square{
+    width: 260px;
+    height: 260px;
+    border-radius: 20px;
+    opacity: 0.800000011920929;
+    backdrop-filter: blur(25px);
+    
+}
+
+.advantage__box-elem{
+    display: flex;
+}
+
+.advantage-elem-item-one{
+    width: 560px;
+
+}
+
+.advantage-elem-item-two{
+    margin-left: 10px;
+    width: 593px;
+
+}
+
+.advantage-item-piece{
+    box-sizing: border-box;
+    margin-bottom: 6px;
+    padding-left: 30px;
+}
+
+.advantage-item-piece .percent{
+    color: var(--unnamed, #00B4FF);
+    font-size: 106.667px;
+    font-weight: 700;
+    line-height: 131%;
+    text-transform: uppercase;
+}
+
+.gray__border .percent{
+    font-size: 64px;
+    font-weight: 450;
+    line-height: normal;
+    color: #ADADAD;
+}
+
+.advantage__box-elem .text_white{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 450;
+    line-height: normal;
+}
+
+.advantage__box-elem .text_grey{
+    font-size: 20px;
+    font-weight: 450;
+    line-height: 131%;
+}
+
+.advantage__box-elem .percent_small{
+    color: var(--unnamed, #00B4FF);
+    font-size: 64px;
+    font-weight: 450;
+    line-height: normal;
+}
+
+.piece_one{
+    height: 376px;
+}
+.piece_two{
+    height: 143px;
+}
+.piece_three{
+    height: 259px;
+}
+.pirce_four{
+    height: 259px;
+}
+.advantage__box__bottom{
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.piece_one .percent{
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+
+.piece_one .text_white{
+    padding-right: 75px;
+    margin-top: 40px;
+}
+
+.piece_two .text_grey{
+    margin-top: 60px;
+}
+
+.piece_three .percent{
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+
+.piece_three .text_grey{
+    margin-top: 40px;
+    padding-right: 60px;
+}
+
+.pirce_four .percent_small{
+    padding-top: 58px;
+}
+
+.pirce_four .text_white{
+    margin-top: 42px;
+}
+
+/* Motto-Advantage style end */
+/* Motto style end */
+
+/* Popup style start */
+
+.popup{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close{
+    color: #aaa;
+    font-size: 28px;
+    margin-top: -10px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.close:hover,.close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup_header{
+    background-color: #00B4FF;
+    height: 40px;
+    color: wheat;
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 2px 16px;
+}
+
+.popup_body{
+    padding: 10px 40px;
+    font-size: 20px;
+    font-family: 'Futura PT';
+    color: #000;
+    font-weight: 400;
+}
+
+.popup_content{
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 2px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0,4s;
+}
+
+@keyframes animatetop{
+    from{
+        top: -300px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* Popup style end */
+
+/* Checkuot style start */
+
+.checkout{
+    display: flex;
+    margin-top: 195px;
+    max-height: 871px;
+
+}
+
+.checkout__side{
+    height: 871px;
+    margin-top: 5px;
+}
+
+.checkout__title{
+    color: #FFF;
+    font-family: 'Neue Machina';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 65px; 
+    vertical-align:middle;
+    text-align: center;
+}
+
+.checkout__title span{
+    color: #00B4FF;
+}
+
+.checkout__body{
+    margin-top: 80px;
+    display: flex;
+}
+
+.checkout__box__title{
+    color: #FFF;
+    font-family: 'Futura PT';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.checkout__box__item{
+    margin-top: 20px;
+}
+
+.checkout__box__item-elem .gray__border{
+    border: 2px solid #D9D9D9;
+    box-sizing: border-box;
+}
+
+.checkout__input{
+    width: 559px;
+    height: 85px;
+    border-radius: 10px;
+    background: none;
+}
+
+.checkout__input:nth-child(n+2){
+    margin-top: 40px;
+}
+
+.checkout_firstname{
+    margin-top: 23px;
+}
+
+.checkout__input input{
+    color:  #eeeeee;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 100;
+    background: none;
+    margin-left: 10px;
+    width: 100%;
+    height: 85px;
+    border: none;
+    outline: none;
+}
+
+.checkout__box{
+    width: 560px;
+    height: 685px;
+}
+
+.checkout__box:nth-child(n+2){
+    margin-left: 40px;
+}
+
+.checkout_checkbox{
+    margin-top: 20px;
+}
+
+.checkout__box__item__checkbox{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+}
+
+.label__checkbox{
+    color:  #717174;
+    font-family: 'Futura PT';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.custom__checkbox{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 2px;
+    border: 1px solid #B3B3B3;
+    background: #FFF;
+    margin-right: 5px;
+    vertical-align: sub;
+    position: relative;
+}
+
+.custom__checkbox::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/svg/check_mark.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    margin-top: 1px;
+    transition: 0.15s ease-in;
+}
+
+.checkout__box__item__checkbox:checked + .custom__checkbox::before{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.checkout__button{
+    margin-top: 35px;
+}
+
+.privacy_policy{
+    cursor: pointer;
+    color: #F00;
+    font-family: 'Futura PT';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 5px;
+}
+
+.checkout__boxitem__textwrapper{
+    padding: 35px;
+}
+
+.checkout__box__order__details{
+    color:  #eeeeee;
+    background: none;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 100;
+    width: 100%;
+}
+
+/* Checkuot style end */
+
+/* Footer style start */
+
+.footer{
+    margin-top: 204px;
+    min-height: 204px;
+    background: rgba(217, 217, 217, 0.9);
+    backdrop-filter: blur(25px);
+    background: transparent;
+    background: -moz-linear-gradient(top, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: -webkit-linear-gradient(top, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: -o-linear-gradient(top, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(to bottom, rgba(217, 217, 217, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.box__footer{
+    padding-top: 55px;
+    border-radius: 0;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.text__footer{
+    display: block;
+    margin-top: 10px;
+    color: #FFF;
+    font-family: 'Futura PT';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 131%;
+    text-transform: uppercase;
+}
+
+.text__footer__url{
+    display: block;
+    margin-top: 46px;
+    margin-bottom: 10px;
+}
+
+.text__footer__url a{
+    color: #FFF;
+    font-family: 'Futura PT';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 131%;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+/* Footer style end */
