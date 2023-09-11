@@ -1500,19 +1500,18 @@ opacity: 0.8;
 
 .text__footer__url{
     display: block;
-    margin-top: 46px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.text__footer__url a{
-    color: #FFF;
-    font-family: 'Futura PT';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 131%;
-    text-transform: uppercase;
-    cursor: pointer;
-    text-decoration: none;
+.logo__footer__fasie{
+    width: 334px;
+    height: 190px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../img/head_logo_fasie.png");
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 /* Footer style end */
